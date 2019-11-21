@@ -7,23 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!-- Font Awesome Min JS -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
     <!-- Owl Theme Default CSS -->
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
-    <title>Addax - Multipurpose Landing Page HTML Template + RTL Supported</title>
+    <title>Welcome to Code For Geeks</title>
 </head>
 
 <body data-spy="scroll" data-offset="70">
@@ -168,7 +168,7 @@
 
                 <div class="col-lg-6 col-md-12">
                     <div class="about-video">
-                        <img src="assets/img/about.jpg" alt="about">
+                        <img src="{{asset('assets/img/about.jpg')}}" alt="about">
                         <div class="video-btn">
                             <a href="https://www.youtube.com/watch?v=GfLccvR0nVk" class="popup-youtube"><i class="fa fa-play"></i></a>
                         </div>
@@ -185,7 +185,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-5">
                     <div class="image">
-                        <img src="assets/img/about-strategy.jpg" alt="image">
+                        <img src="{{asset('assets/img/about-strategy.jpg')}}" alt="image">
                     </div>
                 </div>
 
@@ -342,7 +342,7 @@
 
                 <div class="col-lg-6 col-md-12">
                     <div class="skill-video">
-                        <img src="assets/img/video-img.jpg" alt="video-img">
+                        <img src="{{asset('assets/img/video-img.jpg')}}" alt="video-img">
                         <div class="video-btn">
                             <a href="https://www.youtube.com/watch?v=Pj80xAVP6QM" class="popup-youtube"><i class="fa fa-play"></i></a>
                         </div>
@@ -407,7 +407,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-1.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-1.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -429,7 +429,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-2.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-2.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -451,7 +451,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-3.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-3.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -473,7 +473,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-4.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-4.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -495,7 +495,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-5.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-5.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -517,7 +517,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="assets/img/team-6.jpg" alt="team-img">
+                                <img src="{{asset('assets/img/team-6.jpg')}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
@@ -590,7 +590,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img1.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img1.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-pencil-square-o"></i>
@@ -607,7 +607,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img2.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img2.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-linode"></i>
@@ -624,7 +624,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img3.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img3.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-desktop"></i>
@@ -641,7 +641,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img4.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img4.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-line-chart"></i>
@@ -658,7 +658,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img5.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img5.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-anchor"></i>
@@ -675,7 +675,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img6.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img6.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-headphones"></i>
@@ -692,7 +692,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img7.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img7.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-mobile"></i>
@@ -709,7 +709,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img8.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img8.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-camera-retro"></i>
@@ -726,7 +726,7 @@
                 <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                     <div class="single-services">
                         <div class="services-img">
-                            <img src="assets/img/services-img9.jpg" alt="services-img">
+                            <img src="{{asset('assets/img/services-img9.jpg')}}" alt="services-img">
 
                             <div class="icon">
                                 <i class="fa fa-life-ring"></i>
@@ -790,7 +790,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="why-we-different-img">
-                                            <img src="assets/img/different-img2.jpg" alt="img">
+                                            <img src="{{asset('assets/img/different-img2.jpg')}}" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -817,7 +817,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="why-we-different-img">
-                                            <img src="assets/img/different-img1.jpg" alt="img">
+                                            <img src="{{asset('assets/img/different-img1.jpg')}}" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -844,7 +844,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="why-we-different-img">
-                                            <img src="assets/img/different-img3.jpg" alt="img">
+                                            <img src="{{asset('assets/img/different-img3.jpg')}}" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -871,7 +871,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="why-we-different-img">
-                                            <img src="assets/img/different-img4.jpg" alt="img">
+                                            <img src="{{asset('assets/img/different-img4.jpg')}}" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -910,7 +910,7 @@
             <div class="row m-0">
                 <div class="col-lg-4 col-md-6 mix brand p-0">
                     <div class="single-work">
-                        <img src="assets/img/work-img1.jpg" alt="work-img">
+                        <img src="{{asset('assets/img/work-img1.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -921,13 +921,12 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img1.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img1.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mix design p-0">
-                    <div class="single-work">
-                        <img src="assets/img/work-img2.jpg" alt="work-img">
+                <div class="col-lg-4 col-md-6 mix design p-0">                  <div class="single-work">
+                        <img src="{{asset('assets/img/work-img2.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -938,13 +937,13 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img2.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img2.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 mix graphic p-0">
                     <div class="single-work">
-                        <img src="assets/img/work-img3.jpg" alt="work-img">
+                        <img src="{{asset('assets/img/work-img3.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -955,13 +954,13 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img3.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img3.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 mix photoshop p-0">
                     <div class="single-work">
-                        <img src="assets/img/work-img4.jpg" alt="work-img">
+                        <img src="{{asset('assets/img/work-img4.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -972,13 +971,13 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img4.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img4.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 mix design p-0">
                     <div class="single-work">
-                        <img src="assets/img/work-img5.jpg" alt="work-img">
+                        <img src="{{asset('assets/img/work-img5.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -989,13 +988,13 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img5.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img5.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 mix illustrator p-0">
                     <div class="single-work">
-                        <img src="assets/img/work-img6.jpg" alt="work-img">
+                        <img src="{{asset('assets/img/work-img6.jpg')}}" alt="work-img">
 
                         <div class="work-content">
                             <h4>Creative Design</h4>
@@ -1006,7 +1005,7 @@
                             </ul>
                         </div>
 
-                        <a href="assets/img/work-img6.jpg" class="popup-btn"><i class="fa fa-plus"></i></a>
+                        <a href="{{asset('assets/img/work-img6.jpg')}}" class="popup-btn"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -1202,7 +1201,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar1.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar1.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1221,7 +1220,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar2.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar2.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1240,7 +1239,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar3.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar3.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1259,7 +1258,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar1.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar1.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1278,7 +1277,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar2.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar2.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1297,7 +1296,7 @@
                     <div class="single-feedback">
                         <div class="client-info">
                             <div class="client-pic">
-                                <img src="assets/img/client-avatar3.jpg" alt="client-avatar">
+                                <img src="{{asset('assets/img/client-avatar3.jpg')}}" alt="client-avatar">
                             </div>
 
                             <div class="client-title">
@@ -1389,73 +1388,73 @@
                 <div class="partner-slider">
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-1.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-1.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-2.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-2.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-3.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-3.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-4.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-4.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-5.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-5.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-6.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-6.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-1.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-1.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-2.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-2.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-3.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-3.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-4.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-4.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-5.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-5.png')}}" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-6.png" alt="partner"></a>
+                            <a href="#"><img src="{{asset('assets/img/partner-6.png')}}" alt="partner"></a>
                         </div>
                     </div>
                 </div>
@@ -1580,39 +1579,39 @@
     <div class="go-top"><i class="fa fa-angle-up"></i></div>
 
     <!-- JQuery Min JS -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
     <!-- Popper Min JS -->
-    <script src="assets/js/popper.min.js"></script>
+    <script src="{{asset('assets/js/popper.min.js')}}"></script>
     <!-- Bootstrap Min JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!-- Owl Carousel JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!-- Magnific Popup JS -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!-- WayPonits JS -->
-    <script src="assets/js/waypoints.min.js"></script>
+    <script src="{{asset('assets/js/waypoints.min.js')}}"></script>
     <!-- CounterUp JS -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!-- Mixitup min JS -->
-    <script src="assets/js/jquery.mixitup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.mixitup.min.js')}}"></script>
     <!-- Jquery Ripples Min JS -->
-    <script src="assets/js/jquery.ripples-min.js"></script>
+    <script src="{{asset('assets/js/jquery.ripples-min.js')}}"></script>
     <!-- Jquery Particles Min JS -->
-    <script src="assets/js/particles.min.js"></script>
+    <script src="{{asset('assets/js/particles.min.js')}}"></script>
     <!-- Form Validator Min JS -->
-    <script src="assets/js/form-validator.min.js"></script>
+    <script src="{{asset('assets/js/form-validator.min.js')}}"></script>
     <!-- Contact Form Min JS -->
-    <script src="assets/js/contact-form-script.js"></script>
+    <script src="{{asset('assets/js/contact-form-script.js')}}"></script>
     <!-- ajaxChimp Min JS -->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{{asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
     <!-- Map API JS FILES -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApghCIIx9MpQhA768sKXxvR_Okg0SF2k4&callback=initMap"></script>
     <!-- Addax Map JS FILE -->
-    <script src="assets/js/addax-map.js"></script>
+    <script src="{{asset('assets/js/addax-map.js')}}"></script>
     <!-- WoW JS -->
-    <script src="assets/js/wow.js"></script>
+    <script src="{{asset('assets/js/wow.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>
