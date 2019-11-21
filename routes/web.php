@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', "WebsiteController@index");
 
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::group(['prefix' => 'courses'], function () {
     Route::get('/', 'CoursesController@index')->name('courses.index');
     Route::get('/save', 'CoursesController@save')->name('courses.save');
+    Route::get('/list', 'CoursesController@list')->name('courses.list');
+
 });

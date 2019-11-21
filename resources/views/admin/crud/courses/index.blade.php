@@ -11,26 +11,26 @@
     <title>Dashboard sales - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
         Dashboard
     </title>
-    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{asset('app-assets/images/ico/apple-icon-120.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
-    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css')}}" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/vendors.css')}}">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/app.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/menu/menu-types/vertical-menu-modern.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/colors/palette-gradient.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/charts/morris.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/fonts/simple-line-icons/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/colors/palette-gradient.css')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/assets/css/style.css')}}">
     <!-- END Custom CSS-->
 </head>
 
@@ -72,13 +72,44 @@
                             <div class="card-content">
                                 <div class="card-body">
                                     <div class="col-md-6">
-                                        <form action="{{route('courses.save'}}" method="post">
+                                        <form action="{{route('courses.save')}}" method="get">
+
+                                            {{--  @include("admin.crud.error")  --}}
+                                            @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                    <ul>
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+
+                                            @if(Session::has('error'))
+                                            <div class="alert alert-danger">
+                                                {{ Session::get('error') }}
+                                                @php
+                                                    Session::forget('error');
+                                                @endphp
+                                            </div>
+                                            @endif
+                                            @if(Session::has('success'))
+                                            <div class="alert alert-success">
+                                                {{ Session::get('success') }}
+                                                @php
+                                                    Session::forget('success');
+                                                @endphp
+                                            </div>
+                                            @endif
+
+                                            {{ csrf_field() }}
+
                                             <div class="form-group">
                                                 <h5>Enter Course Name
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                                                    <input type="text" name="course_name" class="form-control" required=""  placeholder="Enter Course Name" data-validation-required-message="This field is required" aria-invalid="false">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
@@ -91,14 +122,27 @@
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <textarea class="form-control" id="placeTextarea" rows="3" placeholder="Simple Textarea" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
+                                                    <textarea class="form-control" name="course_description" rows="3" placeholder="Enter Course Description" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
-                                                    kindly add the <code>course</code> name you want to create
+                                                    kindly add the <code>course description</code> you want to create
                                                 </p>
                                             </div>
-                                            <button type="button" class="btn btn-primary round btn-min-width mr-1 mb-1">Submit</button>
+                                            <div class="form-group">
+                                                <h5>Enter Course Icon
+                                                </h5>
+                                                <div class="controls">
+                                                    <input type="text" name="course_icon" class="form-control" placeholder="Font Awesome Icon, For eg(fab fa-laravel)">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                                <p>
+                                                    kindly add the <code>course icon</code> if  you want to add
+                                                </p>
+                                            </div>
+
+
+                                            <button type="submit" class="btn btn-primary round btn-min-width mr-1 mb-1">Submit</button>
 
                                         </form>
                                     </div>
@@ -116,23 +160,23 @@
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     @include("admin.footer.index")
     <!-- BEGIN VENDOR JS-->
-    <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
-    <script src="app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/chart.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/raphael-min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/morris.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/data/jvector/visitor-data.js')}}" type="text/javascript"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN MODERN JS-->
-    <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
-    <script src="app-assets/js/core/app.js" type="text/javascript"></script>
-    <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/core/app-menu.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/core/app.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/scripts/customizer.js')}}" type="text/javascript"></script>
     <!-- END MODERN JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/scripts/pages/dashboard-sales.js')}}" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
 </body>
 

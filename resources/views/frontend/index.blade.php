@@ -103,32 +103,16 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-box">
-                        <i class="fa fa-pencil-square-o icon"></i>
-                        <h3>HTML / HTML 5</h3>
-                        <p>HTML is a Hyper Text Mark Up Language used for create website templates on text basis or you can say HTML is the skeleton on web pages.</p>
-                        <a href="#about" title="Read More" class="link-btn"><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-box">
-                        <i class="fa fa-laptop icon"></i>
-                        <h3>CSS / CSS 3</h3>
-                        <p>Cascading Style Sheets (CSS) is a style sheet that is used for making html code stylish. We will also learn how to make responsive sites using CSS also.</p>
-                        <a href="#about" title="Read More" class="link-btn"><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
+                @foreach ($mycourses as $eachcourse)
                 <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                     <div class="single-box">
                         <i class="fa fa-life-ring icon"></i>
-                        <h3>Javascript</h3>
-                        <p>Javascript is a scripting language to program the behaviour of web pages i.e It is used to add client-side behaviour to HTML pages. And to make Web progresive apps.</p>
+                        <h3>{{$eachcourse->course_name}}</h3>
+                        <p>{{$eachcourse->course_description}}</p>
                         <a href="#about" title="Read More" class="link-btn"><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
