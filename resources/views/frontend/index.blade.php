@@ -9,8 +9,8 @@
     <!-- Bootstrap Min CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!-- Font Awesome Min JS -->
-    {{--  <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">  --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <!-- Magnific Popup CSS -->
@@ -347,15 +347,16 @@
 
             <div class="row">
                 <div class="team-slider">
+                    @foreach ($team as $eachmember)
                     <div class="col-lg-12 col-md-12">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="{{asset('assets/img/team-1.jpg')}}" alt="team-img">
+                                <img src="{{asset('images/'.$eachmember->team_image)}}" alt="team-img">
                             </div>
 
                             <div class="team-content">
-                                <h3 class="title">Jisan Smith</h3>
-                                <span class="post">CEO</span>
+                                <h3 class="title">{{$eachmember->team_name}}</h3>
+                                <span class="post">{{$eachmember->team_position}}</span>
                             </div>
 
                             <div class="social">
@@ -368,116 +369,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="{{asset('assets/img/team-2.jpg')}}" alt="team-img">
-                            </div>
-
-                            <div class="team-content">
-                                <h3 class="title">John Ahmed</h3>
-                                <span class="post">Web Developer</span>
-                            </div>
-
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                                    <li><a href="#" class="fa fa-instagram"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="{{asset('assets/img/team-3.jpg')}}" alt="team-img">
-                            </div>
-
-                            <div class="team-content">
-                                <h3 class="title">Arif John</h3>
-                                <span class="post">Back-End Developer</span>
-                            </div>
-
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                                    <li><a href="#" class="fa fa-instagram"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="{{asset('assets/img/team-4.jpg')}}" alt="team-img">
-                            </div>
-
-                            <div class="team-content">
-                                <h3 class="title">Sakib Johan</h3>
-                                <span class="post">Front-End Developer</span>
-                            </div>
-
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                                    <li><a href="#" class="fa fa-instagram"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="{{asset('assets/img/team-5.jpg')}}" alt="team-img">
-                            </div>
-
-                            <div class="team-content">
-                                <h3 class="title">John Doe</h3>
-                                <span class="post">Web Developer</span>
-                            </div>
-
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                                    <li><a href="#" class="fa fa-instagram"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="{{asset('assets/img/team-6.jpg')}}" alt="team-img">
-                            </div>
-
-                            <div class="team-content">
-                                <h3 class="title">Olivia Smith</h3>
-                                <span class="post">Photographer</span>
-                            </div>
-
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                                    <li><a href="#" class="fa fa-instagram"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -688,7 +580,7 @@
     <!-- End Services Area -->
 
     <!-- Start Why We Are Different -->
-    <section class="why-we-different ptb-80 bg-222222">
+    {{--  <section class="why-we-different ptb-80 bg-222222">
         <div class="container">
             <div class="section-title">
                 <h2>Why We <span>Are Different</span></h2>
@@ -824,11 +716,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --}}
     <!-- End Why Are Different -->
 
     <!-- Start Work Area -->
-    <section id="work" class="work-area ptb-80">
+    {{--  <section id="work" class="work-area ptb-80">
         <div class="container">
             <div class="section-title">
                 <h2>Our <span>Work</span></h2>
@@ -953,7 +845,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --}}
     <!-- End Work Area -->
 
     <!-- Start Price Area -->
@@ -1197,62 +1089,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feedback">
-                        <div class="client-info">
-                            <div class="client-pic">
-                                <img src="{{asset('assets/img/client-avatar1.jpg')}}" alt="client-avatar">
-                            </div>
-
-                            <div class="client-title">
-                                <h4>James Anderson</h4>
-                                <h5>CEO of Facebook</h5>
-                            </div>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feedback">
-                        <div class="client-info">
-                            <div class="client-pic">
-                                <img src="{{asset('assets/img/client-avatar2.jpg')}}" alt="client-avatar">
-                            </div>
-
-                            <div class="client-title">
-                                <h4>Alex Smith</h4>
-                                <h5>CEO of Twitter</h5>
-                            </div>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-
-                        <span><i class="fa fa-quote-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feedback">
-                        <div class="client-info">
-                            <div class="client-pic">
-                                <img src="{{asset('assets/img/client-avatar3.jpg')}}" alt="client-avatar">
-                            </div>
-
-                            <div class="client-title">
-                                <h4>Olivia Smith</h4>
-                                <h5>CEO of Envytheme</h5>
-                            </div>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

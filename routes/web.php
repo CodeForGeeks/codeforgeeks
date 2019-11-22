@@ -35,3 +35,9 @@ Route::group(['prefix' => 'about'], function () {
     Route::get('/save', 'AboutController@save')->name('about.save');
     Route::get('/list', 'AboutController@list')->name('about.list');
 });
+
+Route::group(['prefix' => 'team'], function () {
+    Route::get('/', 'TeamController@index')->name('team.index');
+    Route::post('/save', 'TeamController@save')->name('team.save');
+    Route::get('/list', 'TeamController@list')->name('team.list');
+});

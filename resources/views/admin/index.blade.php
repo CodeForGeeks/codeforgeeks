@@ -11,26 +11,26 @@
     <title>Dashboard sales - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
         Dashboard
     </title>
-    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{asset('app-assets/images/ico/apple-icon-120.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/vendors.css')}}">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/app.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/menu/menu-types/vertical-menu-modern.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/colors/palette-gradient.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/charts/morris.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/fonts/simple-line-icons/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/colors/palette-gradient.css')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/assets/css/style.css')}}">
     <!-- END Custom CSS-->
 </head>
 
@@ -301,13 +301,13 @@
                                                 <td class="text-truncate p-1">
                                                     <ul class="list-unstyled users-list m-0">
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-4.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-4.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-5.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-5.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-6.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-6.png')}}" alt="Avatar">
                                                         </li>
                                                         <li class="avatar avatar-sm">
                                                             <span class="badge badge-info">+8 more</span>
@@ -329,10 +329,10 @@
                                                 <td class="text-truncate p-1">
                                                     <ul class="list-unstyled users-list m-0">
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-7.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-7.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-8.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-8.png')}}" alt="Avatar">
                                                         </li>
                                                         <li class="avatar avatar-sm">
                                                             <span class="badge badge-info">+5 more</span>
@@ -354,13 +354,13 @@
                                                 <td class="text-truncate p-1">
                                                     <ul class="list-unstyled users-list m-0">
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-1.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-1.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-2.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-2.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-3.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-3.png')}}" alt="Avatar">
                                                         </li>
                                                         <li class="avatar avatar-sm">
                                                             <span class="badge badge-info">+3 more</span>
@@ -382,10 +382,10 @@
                                                 <td class="text-truncate p-1">
                                                     <ul class="list-unstyled users-list m-0">
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-11.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-11.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-12.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-12.png')}}" alt="Avatar">
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -404,10 +404,10 @@
                                                 <td class="text-truncate p-1">
                                                     <ul class="list-unstyled users-list m-0">
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-6.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-6.png')}}" alt="Avatar">
                                                         </li>
                                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-4.png" alt="Avatar">
+                                                            <img class="media-object rounded-circle" src="{{asset('app-assets/images/portrait/small/avatar-s-4.png')}}" alt="Avatar">
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -482,23 +482,23 @@
     @include("admin.footer.index")
 
     <!-- BEGIN VENDOR JS-->
-    <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
-    <script src="app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/chart.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/raphael-min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/morris.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/data/jvector/visitor-data.js')}}" type="text/javascript"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN MODERN JS-->
-    <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
-    <script src="app-assets/js/core/app.js" type="text/javascript"></script>
-    <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/core/app-menu.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/core/app.js')}}" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/scripts/customizer.js')}}" type="text/javascript"></script>
     <!-- END MODERN JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
+    <script src="{{asset('app-assets/js/scripts/pages/dashboard-sales.js')}}" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
 </body>
 
