@@ -25,9 +25,8 @@ class CoursesController extends Controller
         $course->course_description = $request->course_description;
         $course->course_icon = $request->course_icon;
         $course->save();
-        return redirect()->back()->with('success', 'User created successfully.');
+        return redirect()->back()->with('success', 'Course created successfully.');
     }
-
 
     public function list()
     {

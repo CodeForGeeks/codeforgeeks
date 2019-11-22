@@ -9,7 +9,8 @@
     <!-- Bootstrap Min CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!-- Font Awesome Min JS -->
-    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+    {{--  <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">  --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <!-- Animate CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <!-- Magnific Popup CSS -->
@@ -202,64 +203,22 @@
     <section class="who-we-are ptb-80 bg-222222">
         <div class="container">
             <div class="section-title">
-                <h2>Who We <span>Are</span></h2>
+                <h2>On what <span>Technologies</span> do we teach?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
             <div class="row">
+                @foreach ($technologies as $eachtechnology)
                 <div class="col-lg-4 col-md-6">
                     <div class="single-who-we-are">
-                        <i class="fa fa-users"></i>
-                        <h4>We are Professional</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>1</span>
+                            {!! $eachtechnology->technology_icon !!}
+                            <h4>{{$eachtechnology->technology_name}}</h4>
+                            <p>{{$eachtechnology->technology_description}}</p>
+                            <span>{{$eachtechnology->technology_id}}</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-who-we-are">
-                        <i class="fa fa-lightbulb-o"></i>
-                        <h4>We are Passionate</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>2</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-who-we-are">
-                        <i class="fa fa-tag"></i>
-                        <h4>We are Creative</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>3</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-who-we-are">
-                        <i class="fa fa-scissors"></i>
-                        <h4>We are Designer</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-who-we-are">
-                        <i class="fa fa-linode"></i>
-                        <h4>We are Unique</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>5</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-who-we-are">
-                        <i class="fa fa-life-ring"></i>
-                        <h4>We are Support</h4>
-                        <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.</p>
-                        <span>6</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
