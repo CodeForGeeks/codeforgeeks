@@ -50,7 +50,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Team</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Testimonials</h3>
                     <div class="row breadcrumbs-top d-inline-block">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
@@ -58,7 +58,7 @@
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Create, Read & Delete</a>
                                 </li>
-                                <li class="breadcrumb-item active">Team
+                                <li class="breadcrumb-item active">Testimonial
                                 </li>
                             </ol>
                         </div>
@@ -71,13 +71,13 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Team</h4>
+                                <h4 class="card-title">Testimonial</h4>
                                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
                                     <div class="col-md-6">
-                                        <form action="{{route('team.save')}}" method="POST" enctype="multipart/form-data">
+                                        <form action="{{route('testimonial.save')}}" method="get">
 
                                             {{--  @include("admin.crud.error")  --}}
                                             @if ($errors->any())
@@ -110,39 +110,41 @@
                                             {{ csrf_field() }}
 
                                             <div class="form-group">
-                                                <h5>Enter Team Member Name
+                                                <h5>Enter Testimonial Name
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <input type="text" name="team_name" class="form-control" required=""  placeholder="Enter Team Member Name" data-validation-required-message="This field is required" aria-invalid="false">
+                                                    <input type="text" name="testimonial_name" class="form-control" required=""  placeholder="Enter Testimonial Name" data-validation-required-message="This field is required" aria-invalid="false">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
-                                                    kindly add the <code>team member</code> name you want to create
+                                                    kindly add the <code>testimonial</code> name you want to create
                                                 </p>
                                             </div>
 
                                             <div class="form-group">
-                                                <h5>Enter Course Description
+                                                <h5>Enter Testimonial Profession
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <textarea class="form-control" name="team_position" rows="3" placeholder="Enter Team Member Position" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
+                                                    <input type="text" name="testimonial_position" class="form-control"  required=""  placeholder="Enter Clients Profession">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
-                                                    kindly add the <code>Team Member position</code> you want to add
+                                                    kindly add the <code>Profession</code> of the client
                                                 </p>
                                             </div>
+
                                             <div class="form-group">
-                                                <h5>Enter Course Icon
+                                                <h5>Enter Testimonial Message
+                                                    <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <input type="file" name="team_image" class="form-control" placeholder="Font Awesome Icon, For eg(fab fa-laravel)">
+                                                    <textarea class="form-control" name="testimonial_message" rows="3" required="" placeholder="Enter Testimonial Description" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
-                                                    kindly add the <code>course icon</code> if  you want to add
+                                                    kindly add the <code>testimonial message</code> you want to add
                                                 </p>
                                             </div>
 

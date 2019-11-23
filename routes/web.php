@@ -19,6 +19,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+/**
+ * Create, Read, Update & Delete
+ */
 Route::group(['prefix' => 'courses'], function () {
     Route::get('/', 'CoursesController@index')->name('courses.index');
     Route::get('/save', 'CoursesController@save')->name('courses.save');
@@ -35,9 +39,13 @@ Route::group(['prefix' => 'about'], function () {
     Route::get('/save', 'AboutController@save')->name('about.save');
     Route::get('/list', 'AboutController@list')->name('about.list');
 });
-
 Route::group(['prefix' => 'team'], function () {
     Route::get('/', 'TeamController@index')->name('team.index');
     Route::post('/save', 'TeamController@save')->name('team.save');
     Route::get('/list', 'TeamController@list')->name('team.list');
+});
+Route::group(['prefix' => 'testimonial'], function () {
+    Route::get('/', 'TestimonialController@index')->name('testimonial.index');
+    Route::post('/save', 'TestimonialController@save')->name('testimonial.save');
+    Route::get('/list', 'TestimonialController@list')->name('testimonial.list');
 });
