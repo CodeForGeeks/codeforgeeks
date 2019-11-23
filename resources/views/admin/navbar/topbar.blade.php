@@ -4,7 +4,7 @@
 			<ul class="nav navbar-nav flex-row">
 				<li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
 				<li class="nav-item mr-auto">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{{route('dashboard')}}">
 						<img class="brand-logo" alt="modern admin logo" src="{{asset('app-assets/images/logo/logo.png')}}">
 						<h3 class="brand-text">Modern Admin</h3>
 					</a>
@@ -38,7 +38,7 @@
 									<li class="menu-list">
 										<ul>
 											<li>
-												<a class="dropdown-item" href="layout-2-columns.html"><i class="ft-file"></i> Page layouts & Templates</a>
+												<a class="dropdown-item" href="#"><i class="ft-file"></i> Page layouts & Templates</a>
 											</li>
 											<li><a href="#"><i class="ft-align-left"></i> Multi level menu</a>
 												<ul>
@@ -56,12 +56,12 @@
 												</ul>
 											</li>
 											<li>
-												<a class="dropdown-item" href="color-palette-primary.html"><i class="ft-camera"></i> Color palette system</a>
+												<a class="dropdown-item" href="#"><i class="ft-camera"></i> Color palette system</a>
 											</li>
-											<li><a class="dropdown-item" href="sk-2-columns.html"><i class="ft-edit"></i> Page starter kit</a></li>
-											<li><a class="dropdown-item" href="changelog.html"><i class="ft-minimize-2"></i> Change log</a></li>
+											<li><a class="dropdown-item" href="#"><i class="ft-edit"></i> Page starter kit</a></li>
+											<li><a class="dropdown-item" href="#"><i class="ft-minimize-2"></i> Change log</a></li>
 											<li>
-												<a class="dropdown-item" href="https://pixinvent.ticksy.com/"><i class="la la-life-ring"></i> Customer support center</a>
+												<a class="dropdown-item" href="#"><i class="la la-life-ring"></i> Customer support center</a>
 											</li>
 										</ul>
 									</li>
