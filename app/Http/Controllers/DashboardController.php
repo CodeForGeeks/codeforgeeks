@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Courses;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class DashboardController extends AdminController
 {
     //
     public function index()

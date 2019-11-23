@@ -8,7 +8,7 @@ use Intervention\Image\Facades\Image;
 
 
 
-class TeamController extends Controller
+class TeamController extends AdminController
 {
     public function index()
     {

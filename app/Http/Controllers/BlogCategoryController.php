@@ -5,21 +5,24 @@ namespace App\Http\Controllers;
 use App\BlogCategory;
 use Illuminate\Http\Request;
 
-class BlogCategoryController extends Controller
+class BlogCategoryController extends AdminController
 {
+    public function __construct()
+    {
+        parent::__construct();
+        parent::addVisit();
+    }
     public function index()
     {
         $categories = BlogCategory::all();
         return view("admin.crud.blog_category.index")->with(compact('categories'));
     }
 
-
     public function save(Request $request)
     {
         $request->validate([
             'blog_category_name' => 'required|unique:blog_category,blog_category_name|max:20',
         ]);
-
 
         $testimonial = new BlogCategory();
         $testimonial->blog_category_name = $request->blog_category_name;

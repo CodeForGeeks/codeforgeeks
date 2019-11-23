@@ -8,7 +8,7 @@ use App\Technology;
 use App\Testimonials;
 use Illuminate\Http\Request;
 
-class WebsiteController extends Controller
+class WebsiteController extends AdminController
 {
     //
     public function index()

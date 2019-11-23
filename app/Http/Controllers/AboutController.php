@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\About;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class AboutController extends AdminController
 {
     public function index()
     {
