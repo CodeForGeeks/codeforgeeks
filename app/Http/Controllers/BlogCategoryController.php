@@ -2,35 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\BlogCategory;
 use Illuminate\Http\Request;
 
 class BlogCategoryController extends Controller
 {
     public function index()
     {
-        return view("admin.crud.testimonial.index");
+        $categories = BlogCategory::all();
+        return view("admin.crud.blog_category.index")->with(compact('categories'));
     }
 
 
     public function save(Request $request)
     {
         $request->validate([
-            'testimonial_client' => 'required|unique:testimonial,testimonial_client|max:20',
-            'testimonial_position' => 'required|max:200',
+            'blog_category_name' => 'required|unique:blog_category,blog_category_name|max:20',
         ]);
 
-        $testimonial = new Testimonials();
-        $testimonial->testimonial_client	 = $request->testimonial_client	;
-        $testimonial->testimonial_position = $request->testimonial_position;
-        $testimonial->testimonial_message = $request->testimonial_message;
-        $testimonial->testimonial_client_image = $imageName;
+
+        $testimonial = new BlogCategory();
+        $testimonial->blog_category_name = $request->blog_category_name;
+        if($request->blog_category_parent == "")
+        {
+            $testimonial->blog_category_parent = null;
+        }
+        else{
+            $testimonial->blog_category_parent = $request->blog_category_parent;
+        }
         $testimonial->save();
         return redirect()->back()->with('success', 'Testimonials added successfully.');
     }
 
     public function list()
     {
-        $allRecords = Testimonials::all();
+        $allRecords = BlogCategory::all();
         return $allRecords;
     }
 }
