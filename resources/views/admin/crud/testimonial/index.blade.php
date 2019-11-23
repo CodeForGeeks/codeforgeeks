@@ -76,7 +76,7 @@
                             <div class="card-content">
                                 <div class="card-body">
                                     <div class="col-md-6">
-                                        <form action="{{route('testimonial.save')}}" method="get">
+                                        <form action="{{route('testimonial.save')}}" method="POST" enctype="multipart/form-data">
 
                                             {{--  @include("admin.crud.error")  --}}
                                             @if ($errors->any())
@@ -113,7 +113,7 @@
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <input type="text" name="testimonial_name" class="form-control" required=""  placeholder="Enter Testimonial Name" data-validation-required-message="This field is required" aria-invalid="false">
+                                                    <input type="text" name="testimonial_client" class="form-control" required=""  placeholder="Enter Client Name" data-validation-required-message="This field is required" aria-invalid="false">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
@@ -126,7 +126,7 @@
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <input type="text" name="testimonial_position" class="form-control"  required=""  placeholder="Enter Clients Profession">
+                                                    <input type="text" name="testimonial_position" class="form-control"  required=""  placeholder="Enter Client's Profession">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
@@ -139,13 +139,26 @@
                                                     <span class="required">*</span>
                                                 </h5>
                                                 <div class="controls">
-                                                    <textarea class="form-control" name="testimonial_message" rows="3" required="" placeholder="Enter Testimonial Description" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
+                                                    <textarea class="form-control" name="testimonial_message" rows="3" required="" placeholder="Enter Client Testimonial Description" data-validation-required-message="This field is required" aria-invalid="false"></textarea>
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
                                                     kindly add the <code>testimonial message</code> you want to add
                                                 </p>
                                             </div>
+                                            <div class="form-group">
+                                                <h5>Enter Client Image
+                                                    <span class="required">*</span>
+                                                </h5>
+                                                <div class="controls">
+                                                    <input type="file" name="testimonial_image" required="" class="form-control">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                                <p>
+                                                    kindly add the <code>Client image</code>
+                                                </p>
+                                            </div>
+
 
 
                                             <button type="submit" class="btn btn-primary round btn-min-width mr-1 mb-1">Submit</button>

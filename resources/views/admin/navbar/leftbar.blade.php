@@ -53,6 +53,15 @@
                 </ul>
             </li>
 
+            <li class=" nav-item"><a href="#"><i class="fa fa-edit" aria-hidden="true"></i><span class="menu-title" data-i18n="nav.page_layouts.main"> Blog Categories</span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="{{route('blog_category.index')}}" data-i18n="nav.page_layouts.1_column">Add Blog Category</a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('blog_category.index')}}" data-i18n="nav.page_layouts.1_column">All Blog Category</a>
+                    </li>
+                </ul>
+            </li>
+
 
 
 		</ul>

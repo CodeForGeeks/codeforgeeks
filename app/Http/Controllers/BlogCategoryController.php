@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Technology;
-use App\Testimonials;
 use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
 
-class TestimonialController extends Controller
+class BlogCategoryController extends Controller
 {
     public function index()
     {
@@ -20,23 +17,7 @@ class TestimonialController extends Controller
         $request->validate([
             'testimonial_client' => 'required|unique:testimonial,testimonial_client|max:20',
             'testimonial_position' => 'required|max:200',
-            'testimonial_message' => 'required|max:200',
-            'testimonial_image' => 'required|mimes:jpeg,png,jpg,gif,svg'
         ]);
-
-        $originalImage = $request->file('testimonial_image');
-        $thumbnailImage = Image::make($originalImage);
-        $thumbnailPath = public_path() . '/thumbnail/';
-        $originalPath = public_path() . '/images/';
-        $time = time();
-        $imageName= $time . $originalImage->getClientOriginalName();
-
-        $OriginalImageName = $originalPath . $time . $originalImage->getClientOriginalName();
-        $thumbnailImage->save($OriginalImageName);
-
-        $thumbnailImage->fit(200);
-        $ThumbnailImageName = $thumbnailPath . $time . $originalImage->getClientOriginalName();
-        $thumbnailImage->save($ThumbnailImageName);
 
         $testimonial = new Testimonials();
         $testimonial->testimonial_client	 = $request->testimonial_client	;
@@ -52,5 +33,4 @@ class TestimonialController extends Controller
         $allRecords = Testimonials::all();
         return $allRecords;
     }
-
 }

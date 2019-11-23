@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Courses;
 use App\Team;
 use App\Technology;
+use App\Testimonials;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -15,6 +16,7 @@ class WebsiteController extends Controller
         $mycourses = Courses::all();
         $technologies = Technology::all();
         $team = Team::all();
-        return view("frontend.index")->with(compact('mycourses', 'technologies', 'team'));
+        $testimonials = Testimonials::all();
+        return view("frontend.index")->with(compact('mycourses', 'technologies', 'team', 'testimonials'));
     }
 }

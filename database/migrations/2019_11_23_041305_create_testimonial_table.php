@@ -18,6 +18,7 @@ class CreateTestimonialTable extends Migration
             $table->text('testimonial_client');
             $table->text('testimonial_position');
             $table->text('testimonial_message');
+            $table->text('testimonial_client_image');
             $table->timestamps();
         });
     }
