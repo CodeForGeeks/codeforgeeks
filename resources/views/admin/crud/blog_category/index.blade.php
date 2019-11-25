@@ -119,6 +119,7 @@
                                                     kindly add the <code>Course Category</code> name you want to create
                                                 </p>
                                             </div>
+                                            
 
                                             <div class="form-group">
                                                 <h5>Enter Parent Course Category
