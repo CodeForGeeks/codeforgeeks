@@ -11,14 +11,26 @@
 |
 */
 
-Route::get('/', "WebsiteController@index");
+
+
+Route::group([], function() {
+    Route::get('/', "WebsiteController@index")->name("homepage");
+    
+    Route::get('/courses/{category}/', "CoursesController@getcourses")->name("getcourses");
+    Route::get('/courses/{category}/{pagename}/', function ($category,$pagename) {
+        return $category . "<br/>" . $pagename;
+    });
+
+});
+
+
 
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'dashboard'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth'] ], function () {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
 
@@ -55,6 +67,11 @@ Route::group(['prefix' => 'dashboard'], function () {
         Route::get('/', 'BlogCategoryController@index')->name('blog_category.index');
         Route::post('/save', 'BlogCategoryController@save')->name('blog_category.save');
         Route::get('/list', 'BlogCategoryController@list')->name('blog_category.list');
+    });
+    Route::group(['prefix' => 'course_material'], function () {
+        Route::get('/', 'CourseMaterialController@index')->name('course_material.index');
+        Route::post('/save', 'CourseMaterialController@save')->name('course_material.save');
+        Route::get('/list', 'CourseMaterialController@list')->name('course_material.list');
     });
 
 });

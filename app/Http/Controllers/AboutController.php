@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class AboutController extends AdminController
 {
+    public function __construct()
+    {
+        // parent::__construct();
+        parent::addVisit();
+    }
+    
     public function index()
     {
         return view("admin.crud.about.index");

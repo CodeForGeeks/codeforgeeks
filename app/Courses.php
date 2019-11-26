@@ -19,4 +19,9 @@ class Courses extends Model
      * @var array
      */
     protected $guarded = [''];
+
+    public function material()
+    {
+        return $this->hasMany('App\CourseMaterial', "course_id");
+    }
 }

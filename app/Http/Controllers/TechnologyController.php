@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class TechnologyController extends AdminController
 {
+    public function __construct()
+    {
+        // parent::__construct();
+        parent::addVisit();
+    }
     public function index()
     {
         return view("admin.crud.technology.index");

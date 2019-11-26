@@ -17,6 +17,8 @@ class CreateAnalyticsTable extends Migration
             $table->bigIncrements('analytics_id');
             $table->text('analytics_userid')->nullable();
             $table->text('analytics_ipaddress')->nullable();
+            $table->text('analytics_browser')->nullable();
+            $table->text('analytics_operating_system')->nullable();
             $table->text('analytics_location')->nullable();
             $table->text('analytics_latitude')->nullable();
             $table->text('analytics_longitude')->nullable();

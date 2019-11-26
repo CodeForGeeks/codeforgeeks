@@ -10,6 +10,11 @@ use Intervention\Image\Facades\Image;
 
 class TeamController extends AdminController
 {
+    public function __construct()
+    {
+        // parent::__construct();
+        parent::addVisit();
+    }
     public function index()
     {
         return view("admin.crud.team.index");

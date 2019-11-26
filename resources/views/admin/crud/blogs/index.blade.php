@@ -8,9 +8,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title>Dashboard sales - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
-        Dashboard
-    </title>
+    <title>Blogs</title>
     <link rel="apple-touch-icon" href="{{asset('app-assets/images/ico/apple-icon-120.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
@@ -49,7 +47,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Courses</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Blogs</h3>
                     <div class="row breadcrumbs-top d-inline-block">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
@@ -57,7 +55,7 @@
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Create, Read & Delete</a>
                                 </li>
-                                <li class="breadcrumb-item active">Courses
+                                <li class="breadcrumb-item active">Blogs
                                 </li>
                             </ol>
                         </div>
@@ -70,7 +68,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Courses</h4>
+                                <h4 class="card-title">Blogs</h4>
                                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                             </div>
                             <div class="card-content">
@@ -114,19 +112,6 @@
                                                 </h5>
                                                 <div class="controls">
                                                     <input type="text" name="course_name" class="form-control" required=""  placeholder="Enter Course Name" data-validation-required-message="This field is required" aria-invalid="false">
-                                                    <div class="help-block"></div>
-                                                </div>
-                                                <p>
-                                                    kindly add the <code>course</code> name you want to create
-                                                </p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <h5>Enter Course URL
-                                                    <span class="required">*</span>
-                                                </h5>
-                                                <div class="controls">
-                                                    <input type="text" name="course_url" class="form-control" required=""  placeholder="Enter Course URL" data-validation-required-message="This field is required" aria-invalid="false">
                                                     <div class="help-block"></div>
                                                 </div>
                                                 <p>
