@@ -43,18 +43,22 @@ class CoursesController extends AdminController
 
     public function getcourses(Request $request, $coursename)
     {
-        $getCourseList = Courses::where("course_url", $coursename)->get();
-        $data =$getCourseList[0]->material()->get();
-        // dd($data);
-
-        $allCourses = Courses::all();
-        $navbardata =[];
-        $count = 0;
-        foreach ($allCourses as $key ) {
-            $navbardata[$count] = $key->material()->get();
-            $count= $count + 1;
+        try {
+            $getCourseList = Courses::where("course_url", $coursename)->get();
+            $data =$getCourseList[0]->material()->get();
+            // dd($data);
+    
+            $allCourses = Courses::all();
+            $navbardata =[];
+            $count = 0;
+            foreach ($allCourses as $key ) {
+                $navbardata[$count] = $key->material()->get();
+                $count= $count + 1;
+            }
+            // dd($allCourses[0]);
+            return view("frontend.course_layout.index")->with(compact('data',"coursename",'navbardata','allCourses'));    
+        } catch (\Throwable $th) {
+            abort(404); 
         }
-        // dd($allCourses[0]);
-        return view("frontend.course_layout.index")->with(compact('data',"coursename",'navbardata','allCourses'));
     }
 }

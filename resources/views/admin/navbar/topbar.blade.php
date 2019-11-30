@@ -19,6 +19,7 @@
 			<div class="collapse navbar-collapse" id="navbar-mobile">
 				<ul class="nav navbar-nav mr-auto float-left">
 					<li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+					@auth
 					<li class="dropdown nav-item mega-dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Mega</a>
 						<ul class="mega-dropdown-menu dropdown-menu row">
 							<li class="col-md-2">
@@ -32,6 +33,7 @@
 									</div>
 								</div>
 							</li>
+							@auth
 							<li class="col-md-3">
 								<h6 class="dropdown-menu-header text-uppercase"><i class="la la-random"></i> Drill down menu</h6>
 								<ul class="drilldown-menu">
@@ -67,6 +69,8 @@
 									</li>
 								</ul>
 							</li>
+							@endauth
+
 							<li class="col-md-3">
 								<h6 class="dropdown-menu-header text-uppercase"><i class="la la-list-ul"></i> Accordion</h6>
 								<div id="accordionWrap" role="tablist" aria-multiselectable="true">
@@ -139,6 +143,7 @@
 							</li>
 						</ul>
 					</li>
+					@endauth
 					<li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
 						<div class="search-input">
 							<input class="input" type="text" placeholder="Explore Modern...">
@@ -146,6 +151,7 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav float-right">
+					@auth
 					<li class="dropdown dropdown-user nav-item">
 						<form id="logout-form" action="{{ route('logout') }}" method="POST">
 							@csrf
@@ -166,6 +172,7 @@
 	
 						</form>
 					</li>
+					@endauth
 					<li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
 						<div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
 							<a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
@@ -173,80 +180,83 @@
 							<a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
 						</div>
 					</li>
+					@auth
 					<li class="dropdown dropdown-notification nav-item">
-						<a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
-							<span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
-							<li class="dropdown-menu-header">
-								<h6 class="dropdown-header m-0">
-									<span class="grey darken-2">Notifications</span>
-								</h6>
-								<span class="notification-tag badge badge-default badge-danger float-right m-0">5 New</span>
-							</li>
-							<li class="scrollable-container media-list w-100">
-								<a href="javascript:void(0)">
-									<div class="media">
-										<div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan"></i></div>
-										<div class="media-body">
-											<h6 class="media-heading">You have new order!</h6>
-											<p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-											<small>
-												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time>
-											</small>
+							<a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
+								<span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+								<li class="dropdown-menu-header">
+									<h6 class="dropdown-header m-0">
+										<span class="grey darken-2">Notifications</span>
+									</h6>
+									<span class="notification-tag badge badge-default badge-danger float-right m-0">5 New</span>
+								</li>
+								<li class="scrollable-container media-list w-100">
+									<a href="javascript:void(0)">
+										<div class="media">
+											<div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan"></i></div>
+											<div class="media-body">
+												<h6 class="media-heading">You have new order!</h6>
+												<p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+												<small>
+													<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time>
+												</small>
+											</div>
 										</div>
-									</div>
-								</a>
-								<a href="javascript:void(0)">
-									<div class="media">
-										<div class="media-left align-self-center"><i class="ft-download-cloud icon-bg-circle bg-red bg-darken-1"></i></div>
-										<div class="media-body">
-											<h6 class="media-heading red darken-1">99% Server load</h6>
-											<p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu risus.</p>
-											<small>
-												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Five hour ago</time>
-											</small>
+									</a>
+									<a href="javascript:void(0)">
+										<div class="media">
+											<div class="media-left align-self-center"><i class="ft-download-cloud icon-bg-circle bg-red bg-darken-1"></i></div>
+											<div class="media-body">
+												<h6 class="media-heading red darken-1">99% Server load</h6>
+												<p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu risus.</p>
+												<small>
+													<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Five hour ago</time>
+												</small>
+											</div>
 										</div>
-									</div>
-								</a>
-								<a href="javascript:void(0)">
-									<div class="media">
-										<div class="media-left align-self-center"><i class="ft-alert-triangle icon-bg-circle bg-yellow bg-darken-3"></i></div>
-										<div class="media-body">
-											<h6 class="media-heading yellow darken-3">Warning notifixation</h6>
-											<p class="notification-text font-small-3 text-muted">Vestibulum auctor dapibus neque.</p>
-											<small>
-												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Today</time>
-											</small>
+									</a>
+									<a href="javascript:void(0)">
+										<div class="media">
+											<div class="media-left align-self-center"><i class="ft-alert-triangle icon-bg-circle bg-yellow bg-darken-3"></i></div>
+											<div class="media-body">
+												<h6 class="media-heading yellow darken-3">Warning notifixation</h6>
+												<p class="notification-text font-small-3 text-muted">Vestibulum auctor dapibus neque.</p>
+												<small>
+													<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Today</time>
+												</small>
+											</div>
 										</div>
-									</div>
-								</a>
-								<a href="javascript:void(0)">
-									<div class="media">
-										<div class="media-left align-self-center"><i class="ft-check-circle icon-bg-circle bg-cyan"></i></div>
-										<div class="media-body">
-											<h6 class="media-heading">Complete the task</h6>
-											<small>
-												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last week</time>
-											</small>
+									</a>
+									<a href="javascript:void(0)">
+										<div class="media">
+											<div class="media-left align-self-center"><i class="ft-check-circle icon-bg-circle bg-cyan"></i></div>
+											<div class="media-body">
+												<h6 class="media-heading">Complete the task</h6>
+												<small>
+													<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last week</time>
+												</small>
+											</div>
 										</div>
-									</div>
-								</a>
-								<a href="javascript:void(0)">
-									<div class="media">
-										<div class="media-left align-self-center"><i class="ft-file icon-bg-circle bg-teal"></i></div>
-										<div class="media-body">
-											<h6 class="media-heading">Generate monthly report</h6>
-											<small>
-												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last month</time>
-											</small>
+									</a>
+									<a href="javascript:void(0)">
+										<div class="media">
+											<div class="media-left align-self-center"><i class="ft-file icon-bg-circle bg-teal"></i></div>
+											<div class="media-body">
+												<h6 class="media-heading">Generate monthly report</h6>
+												<small>
+													<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last month</time>
+												</small>
+											</div>
 										</div>
-									</div>
-								</a>
-							</li>
-							<li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
-						</ul>
-					</li>
+									</a>
+								</li>
+								<li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
+							</ul>
+						</li>
+	
+					@endauth
 					<li class="dropdown dropdown-notification nav-item">
 						<a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-mail"> </i></a>
 						<ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
@@ -265,7 +275,7 @@
 										</div>
 										<div class="media-body">
 											<h6 class="media-heading">Margaret Govan</h6>
-											<p class="notification-text font-small-3 text-muted">I like your portfolio, let's start.</p>
+											<p class="notification-text font-small-3 text-muted">I like your portfolio, lets start.</p>
 											<small>
 												<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Today</time>
 											</small>

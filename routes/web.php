@@ -16,6 +16,9 @@
 Route::group([], function() {
     Route::get('/', "WebsiteController@index")->name("homepage");
     
+    Route::get('/courses/', function(){
+        return redirect()->route("homepage");
+    })->name("returntohome");
     Route::get('/courses/{category}/', "CoursesController@getcourses")->name("getcourses");
     Route::get('/courses/{category}/{pagename}/', function ($category,$pagename) {
         return $category . "<br/>" . $pagename;
